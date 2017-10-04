@@ -1,31 +1,16 @@
-<html DOCTYPE html>
-  <head>
-    <title>CRM | Contacts</title>
-    <style>
-    body {font-family: Helvetica, Verdana, sans-serif;}
-    h1 {font-family: Georgia, serif; color: lightblue;}
-    h3 {font-weight: 600; color: gray}
-    main {border: 1px solid lightgray; padding: 10px;}
-    ul {border: 0.05em solid lightgray; display: block; padding: 10px; margin: 10px 0;}
-    ul li {list-style: none; line-height: 1.2em;}
-    ul li a {text-decoration: none;}
-    ul li a:hover {background-color: lightblue; color: white; font-weight: bold;}
-    .title {font-family: Georgia, serif; font-size: 0.8em; color: gray;}
-    </style>
-  </head>
-  <body>
-    <h1>CRM | Contacts</h1>
-
-    <main>
       <h3>Contacts list</h3>
-    <% @contacts.each do |person| -%>
-    <ul>
-    <li><span class="title">Name:</span> <%= person.first_name %> <%= person.last_name%></li>
-    <li><span class="title">E-mail:</span> <a href="mailto:<%= person.email %>"><%= person.email %></a></li>
-    <li><span class="title">Notes:</span> <%= person.note%></li>
-    </ul>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Notes</th>
+        </tr>
+        <% @contacts.each do |person| -%>
+        <tr>
+    <td><%= person.first_name %> <%= person.last_name%></td>
+    <td><a href="mailto:<%= person.email %>"><%= person.email %></a></td>
+    <td><%= person.note%></td>
+      </tr>
 
     <% end %>
-    </main>
-  </body>
-</html>
+    </table>
