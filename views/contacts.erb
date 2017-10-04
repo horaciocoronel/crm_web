@@ -1,16 +1,9 @@
-      <h3>Contacts list</h3>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>E-mail</th>
-          <th>Notes</th>
-        </tr>
-        <% @contacts.each do |person| -%>
-        <tr>
-    <td><%= person.first_name %> <%= person.last_name%></td>
-    <td><a href="mailto:<%= person.email %>"><%= person.email %></a></td>
-    <td><%= person.note%></td>
-      </tr>
-
-    <% end %>
-    </table>
+      <div class="info">
+        There are <span class="bold"><%= @count %></span> contacts
+      </div>
+      <% @contacts.each do |person| -%>
+      <article>
+        <h2><%= person.first_name %> <%= person.last_name%> (<%= person.email %>)</h2>
+        <p><a href="#">Edit</a> | <a href="#">Delete</a></p>
+      </article>
+      <% end %>

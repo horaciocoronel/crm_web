@@ -7,6 +7,7 @@ require 'sinatra'
 
   get '/contacts' do
     @contacts = Contact.all
+    @count = Contact.all.count
     # puts @contacts
     erb :contacts
   end
