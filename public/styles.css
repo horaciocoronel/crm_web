@@ -63,6 +63,11 @@ article h2 {
   margin-bottom: 0;
 }
 
+article h2 a {
+  text-decoration: none;
+  color: black;
+}
+
 article p {
   margin: 1px 0 10px 0;
   font-size: 0.9em;
@@ -80,4 +85,5 @@ footer {
   color: white;
   padding: 20px 0;
   margin: 20px 0 0 0;
+  text-align: center;
 }
