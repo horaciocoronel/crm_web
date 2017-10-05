@@ -4,6 +4,9 @@
       <% @contacts.each do |person| -%>
       <article>
         <h2><a href="/contacts/<%= person.id %>"><%= person.first_name %> <%= person.last_name%> (<%= person.email %>)</a></h2>
-        <p><a href="#">Edit</a> | <a href="#">Delete</a></p>
+        <p><a href="/contacts/<%= person.id %>/edit">Edit</a> | <form class="all_contacts" action='/contacts/<%= person.id %>' method='post'>
+          <input type='hidden' name='_method' value='delete'>
+          <input class="all_contacts" type='submit' value='Delete'>
+        </form></p>
       </article>
       <% end %>

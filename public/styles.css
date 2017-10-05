@@ -88,7 +88,44 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width:768px) {
+input {
+    display: block;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+textarea {
+  resize: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+.all_contacts input[type="submit"] {
+    display: inline-block;
+    width: 90px;
+    background:none;
+    border:none;
+    font-size:1em;
+    color:blue;
+    text-decoration: underline;
+    font-size: 0.9em;
+    /*padding: 12px 20px;*/
+    /*margin: 8px 0;*/
+    /*box-sizing: border-box;*/
+    /*margin: 0 auto;*/
+}
+/*@media screen and (min-width:768px) {
 
   main .info {
     margin: 20px 0;
@@ -106,5 +143,5 @@ footer {
     display: inline;
     float: left;
   }
-  
-}
+
+}*/
